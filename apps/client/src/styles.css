@@ -1,0 +1,159 @@
+:root {
+    --bg: #0b0b0c;
+    --fg: #e9e9f0;
+    --muted: #b6b6c3;
+    --accent: #8ad3ff;
+    --ok: #12d87e;
+    --down: #ff6b6b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: ui-sans-serif, system-ui, -apple-system;
+}
+
+.app {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #1d1e25;
+    position: sticky;
+    background: #0e0f13cc;
+    backdrop-filter: blur(6px);
+}
+
+.brand {
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.nav {
+    color: var(--muted);
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+.nav.active {
+    color: var(--fg);
+}
+
+.container {
+    padding: 1.25rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.footer {
+    padding: 1rem 1.25rem;
+    color: var(--muted);
+    border-top: 1px solid #1d1e25;
+}
+
+h1, h2 {
+    margin: 0 0 0.75rem 0;
+}
+
+section {
+    padding: 0.5rem 0 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.75rem;
+}
+
+.card {
+    background: #12131a;
+    border: 1px solid #1d1e25;
+    border-radius: 12px;
+    padding: 0.9rem;
+    color: var(--fg);
+    cursor: pointer;
+    text-align: left;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #0a0a0b;
+    font-weight: 600;
+    padding: 0.6rem 0.9rem;
+    border-radius: 1px solid #1d1e25;
+    text-decoration: none;
+}
+
+.actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.6rem;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    border: 1px solid #1d1e25;
+    background: #12131a;
+    color: var(--muted);
+}
+
+.badge.ok {
+    color: var(--ok);
+    border-color: #1b3b2a;
+}
+
+.badge.down {
+    color: var(--down);
+    border-color: #3b1b1b;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+    border: 1px solid #1d1e25;
+    border-radius: 12px;
+    background: #12131a;
+    text-decoration: none;
+    color: var(--fg);
+}
+
+.row:hover {
+    background: #2a2b35;
+}
+
+.title {
+    font-weight: 600;
+}
+
+.fit {
+    color: var(--muted);
+}
