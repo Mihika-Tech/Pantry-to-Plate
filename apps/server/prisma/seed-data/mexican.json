@@ -1,0 +1,63 @@
+{
+  "cuisine": "Mexican",
+  "dna": {
+    "aromatics": ["onion", "garlic", "jalapeno"],
+    "baseSpices": ["cumin", "chili powder", "oregano"],
+    "staples": ["corn", "beans", "rice", "avocado"],
+    "techniques": ["saute", "grill", "simmer"],
+    "subsGraphJson": {
+      "tortilla": { "flatbread": 0.4 },
+      "jalapeno": { "green chili": 0.5 }
+    }
+  },
+  "recipes": [
+    {
+      "title": "Vegetarian Tacos",
+      "timeMinutes": 25,
+      "costEstimate": 300,
+      "dietTags": ["vegetarian"],
+      "skillLevel": 2,
+      "sidePairs": ["salsa", "guacamole"],
+      "flavor": { "heat": 3, "sweet": 1, "sour": 2, "umami": 3, "bitter": 0 },
+      "ingredients": [
+        { "name": "tortilla", "groups": ["starch"], "qty": 4, "unit": "pieces" },
+        { "name": "black beans", "groups": ["protein"], "qty": 1, "unit": "cup" },
+        { "name": "onion", "groups": ["aromatic"], "qty": 1, "unit": "small" },
+        { "name": "chili powder", "groups": ["spice"], "qty": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Saute onion with chili powder.",
+        "Add beans and mash slightly.",
+        "Fill tortillas and top with salsa."
+      ],
+      "quirks": [
+        "Add lime juice for zing.",
+        "Feta can sub queso fresco."
+      ]
+    },
+    {
+      "title": "Mexican Rice",
+      "timeMinutes": 30,
+      "costEstimate": 200,
+      "dietTags": ["vegan"],
+      "skillLevel": 1,
+      "sidePairs": ["tacos", "beans"],
+      "flavor": { "heat": 1, "sweet": 1, "sour": 1, "umami": 3, "bitter": 0 },
+      "ingredients": [
+        { "name": "rice", "groups": ["starch"], "qty": 1, "unit": "cup" },
+        { "name": "tomato", "groups": ["veg"], "qty": 2, "unit": "medium" },
+        { "name": "onion", "groups": ["aromatic"], "qty": 1, "unit": "small" },
+        { "name": "garlic", "groups": ["aromatic"], "qty": 2, "unit": "cloves" }
+      ],
+      "steps": [
+        "Saute onion and garlic.",
+        "Add tomato puree and rice.",
+        "Simmer with broth until fluffy."
+      ],
+      "quirks": [
+        "Add a dash of cumin for depth.",
+        "Use long-grain rice for separate grains."
+      ]
+    }
+  ]
+}

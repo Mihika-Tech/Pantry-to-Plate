@@ -1,0 +1,61 @@
+{
+  "cuisine": "Chinese",
+  "dna": {
+    "aromatics": ["garlic", "ginger", "scallion"],
+    "baseSpices": ["soy sauce", "rice vinegar", "chili flakes"],
+    "staples": ["rice", "noodles", "sesame oil"],
+    "techniques": ["stir-fry", "steam", "boil"],
+    "subsGraphJson": {
+      "soy sauce": { "tamari": 0.9 },
+      "noodles": { "spaghetti": 0.5 }
+    }
+  },
+  "recipes": [
+    {
+      "title": "Veg Fried Rice",
+      "timeMinutes": 20,
+      "costEstimate": 200,
+      "dietTags": ["vegan"],
+      "skillLevel": 1,
+      "sidePairs": ["spring rolls"],
+      "flavor": { "heat": 2, "sweet": 1, "sour": 1, "umami": 4, "bitter": 0 },
+      "ingredients": [
+        { "name": "rice", "groups": ["starch"], "qty": 2, "unit": "cups" },
+        { "name": "soy sauce", "groups": ["sauce"], "qty": 2, "unit": "tbsp" },
+        { "name": "garlic", "groups": ["aromatic"], "qty": 2, "unit": "cloves" }
+      ],
+      "steps": [
+        "Stir-fry garlic and vegetables.",
+        "Add rice and soy sauce.",
+        "Toss on high heat for 3–5 minutes."
+      ],
+      "quirks": [
+        "Use cold rice for best texture.",
+        "Finish with sesame oil."
+      ]
+    },
+    {
+      "title": "Garlic Noodles",
+      "timeMinutes": 25,
+      "costEstimate": 250,
+      "dietTags": ["vegetarian"],
+      "skillLevel": 2,
+      "sidePairs": ["stir-fried tofu"],
+      "flavor": { "heat": 2, "sweet": 1, "sour": 1, "umami": 3, "bitter": 0 },
+      "ingredients": [
+        { "name": "noodles", "groups": ["starch"], "qty": 200, "unit": "g" },
+        { "name": "soy sauce", "groups": ["sauce"], "qty": 2, "unit": "tbsp" },
+        { "name": "garlic", "groups": ["aromatic"], "qty": 5, "unit": "cloves" }
+      ],
+      "steps": [
+        "Cook noodles until al dente.",
+        "Stir-fry garlic till golden.",
+        "Add soy sauce and noodles; toss well."
+      ],
+      "quirks": [
+        "Top with spring onion for freshness.",
+        "Add chili oil for heat."
+      ]
+    }
+  ]
+}

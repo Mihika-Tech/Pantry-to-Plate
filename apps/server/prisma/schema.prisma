@@ -1,0 +1,85 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../prisma/generated/client" 
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Recipe {
+  id           String   @id @default(cuid())
+  title        String
+  cuisine      String
+  timeMinutes  Int
+  costEstimate Int?
+  dietTags     Json       // ["vegetarian","vegan"]
+  skillLevel   Int
+  sidePairs    Json       // ["jeera rice","raita"]
+  flavor       Json       // {heat, sweet, sour, umami, bitter}
+  createdById  String?
+
+  ingredients  IngredientUse[]
+  steps        Step[]
+  quirks       Quirk[]
+
+  @@index([cuisine])
+}
+
+model Ingredient {
+  id       String   @id @default(cuid())
+  name     String   @unique
+  groups   Json       // ["spice","aromatic","protein",...]
+  aliases  Json       // ["chickpea","garbanzo"]
+  uses     IngredientUse[]
+}
+
+model IngredientUse {
+  id           String     @id @default(cuid())
+  recipeId     String
+  ingredientId String
+  qty          Float?
+  unit         String?
+  optional     Boolean    @default(false)
+  isKeystone   Boolean    @default(false)
+
+  recipe       Recipe     @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  ingredient   Ingredient @relation(fields: [ingredientId], references: [id], onDelete: Cascade)
+}
+
+model Step {
+  id        String  @id @default(cuid())
+  recipeId  String
+  index     Int
+  text      String
+  timersSec Int?
+
+  recipe    Recipe  @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+
+  @@unique([recipeId, index])
+}
+
+model Quirk {
+  id        String  @id @default(cuid())
+  recipeId  String
+  stepIndex Int?
+  text      String
+  tags      Json       // ["substitution","timing","tip"]
+  authorId  String?
+  upvotes   Int      @default(0)
+
+  recipe    Recipe   @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+}
+
+model CuisineDNA {
+  cuisine       String @id
+  aromatics     Json     // ["onion","ginger","garlic"]
+  baseSpices    Json     // ["cumin","coriander","turmeric"]
+  staples       Json     // ["rice","atta","ghee"]
+  techniques    Json     // ["tempering","slow-simmer"]
+  subsGraphJson Json     // { yogurt: { coconut_milk_plus_lemon: 0.6 }, ... }
+}

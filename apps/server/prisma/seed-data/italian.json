@@ -1,0 +1,63 @@
+{
+  "cuisine": "Italian",
+  "dna": {
+    "aromatics": ["garlic", "onion", "celery", "carrot"],
+    "baseSpices": ["black pepper", "chili flakes", "oregano", "basil"],
+    "staples": ["olive oil", "pasta", "tomatoes", "parmesan"],
+    "techniques": ["saute", "simmer", "roast"],
+    "subsGraphJson": {
+      "parmesan": { "pecorino": 0.8 },
+      "spaghetti": { "linguine": 0.8 },
+      "basil": { "oregano": 0.5 }
+    }
+  },
+  "recipes": [
+    {
+      "title": "Pasta Aglio e Olio",
+      "timeMinutes": 20,
+      "costEstimate": 300,
+      "dietTags": ["vegetarian"],
+      "skillLevel": 1,
+      "sidePairs": ["simple salad"],
+      "flavor": { "heat": 2, "sweet": 0, "sour": 0, "umami": 1, "bitter": 0 },
+      "ingredients": [
+        { "name": "spaghetti", "groups": ["starch"], "qty": 200, "unit": "g", "isKeystone": true },
+        { "name": "olive oil", "groups": ["oil"], "qty": 3, "unit": "tbsp" },
+        { "name": "garlic", "groups": ["aromatic"], "qty": 4, "unit": "cloves" },
+        { "name": "chili flakes", "groups": ["spice"], "qty": 0.5, "unit": "tsp" }
+      ],
+      "steps": [
+        "Cook pasta in salted water.",
+        "Infuse oil with garlic and chili.",
+        "Toss pasta with oil; add pasta water."
+      ],
+      "quirks": [
+        "Keep garlic pale—no browning.",
+        "Finish with parsley and a splash of pasta water."
+      ]
+    },
+    {
+      "title": "Caprese Salad",
+      "timeMinutes": 10,
+      "costEstimate": 250,
+      "dietTags": ["vegetarian", "gluten-free"],
+      "skillLevel": 1,
+      "sidePairs": ["garlic bread"],
+      "flavor": { "heat": 0, "sweet": 1, "sour": 1, "umami": 2, "bitter": 0 },
+      "ingredients": [
+        { "name": "tomato", "groups": ["veg"], "qty": 2, "unit": "medium" },
+        { "name": "mozzarella", "groups": ["dairy"], "qty": 100, "unit": "g" },
+        { "name": "basil", "groups": ["herb"], "qty": 10, "unit": "leaves" },
+        { "name": "olive oil", "groups": ["oil"], "qty": 1, "unit": "tbsp" }
+      ],
+      "steps": [
+        "Slice tomato and mozzarella.",
+        "Layer with basil; drizzle olive oil."
+      ],
+      "quirks": [
+        "Add balsamic glaze for tang.",
+        "Chill ingredients for best texture."
+      ]
+    }
+  ]
+}

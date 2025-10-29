@@ -1,0 +1,60 @@
+{
+  "cuisine": "Thai",
+  "dna": {
+    "aromatics": ["lemongrass", "ginger", "garlic"],
+    "baseSpices": ["fish sauce", "lime", "chili"],
+    "staples": ["rice", "coconut milk", "basil"],
+    "techniques": ["stir-fry", "simmer", "grill"],
+    "subsGraphJson": {
+      "fish sauce": { "soy_sauce_plus_lime": 0.6 }
+    }
+  },
+  "recipes": [
+    {
+      "title": "Thai Green Curry",
+      "timeMinutes": 35,
+      "costEstimate": 400,
+      "dietTags": ["gluten-free"],
+      "skillLevel": 3,
+      "sidePairs": ["jasmine rice"],
+      "flavor": { "heat": 3, "sweet": 1, "sour": 2, "umami": 3, "bitter": 0 },
+      "ingredients": [
+        { "name": "coconut milk", "groups": ["liquid"], "qty": 400, "unit": "ml" },
+        { "name": "green curry paste", "groups": ["spice"], "qty": 2, "unit": "tbsp" },
+        { "name": "chicken", "groups": ["protein"], "qty": 300, "unit": "g" }
+      ],
+      "steps": [
+        "Heat curry paste until aromatic.",
+        "Add coconut milk and simmer.",
+        "Add chicken; cook until tender."
+      ],
+      "quirks": [
+        "Add kaffir lime leaves for fragrance.",
+        "Adjust spice with coconut milk."
+      ]
+    },
+    {
+      "title": "Pad Thai",
+      "timeMinutes": 30,
+      "costEstimate": 350,
+      "dietTags": ["gluten-free"],
+      "skillLevel": 3,
+      "sidePairs": ["lime wedges"],
+      "flavor": { "heat": 2, "sweet": 2, "sour": 2, "umami": 4, "bitter": 0 },
+      "ingredients": [
+        { "name": "rice noodles", "groups": ["starch"], "qty": 200, "unit": "g" },
+        { "name": "egg", "groups": ["protein"], "qty": 2, "unit": "pieces" },
+        { "name": "bean sprouts", "groups": ["veg"], "qty": 1, "unit": "cup" }
+      ],
+      "steps": [
+        "Soak rice noodles.",
+        "Stir-fry egg; add noodles.",
+        "Add sauce; toss quickly."
+      ],
+      "quirks": [
+        "Top with crushed peanuts.",
+        "Squeeze lime before serving."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "cuisine": "Mediterranean",
+  "dna": {
+    "aromatics": ["garlic", "onion"],
+    "baseSpices": ["oregano", "thyme", "cumin"],
+    "staples": ["olive oil", "chickpeas", "tomatoes"],
+    "techniques": ["roast", "grill", "mix"],
+    "subsGraphJson": {
+      "feta": { "paneer": 0.4 },
+      "olive oil": { "neutral oil": 0.3 }
+    }
+  },
+  "recipes": [
+    {
+      "title": "Hummus",
+      "timeMinutes": 15,
+      "costEstimate": 200,
+      "dietTags": ["vegan", "gluten-free"],
+      "skillLevel": 1,
+      "sidePairs": ["pita bread", "crudites"],
+      "flavor": { "heat": 0, "sweet": 1, "sour": 1, "umami": 3, "bitter": 0 },
+      "ingredients": [
+        { "name": "chickpeas", "groups": ["protein"], "qty": 1, "unit": "cup", "isKeystone": true },
+        { "name": "olive oil", "groups": ["oil"], "qty": 2, "unit": "tbsp" },
+        { "name": "garlic", "groups": ["aromatic"], "qty": 2, "unit": "cloves" }
+      ],
+      "steps": [
+        "Blend chickpeas, garlic, olive oil, lemon juice, and tahini.",
+        "Adjust salt and consistency."
+      ],
+      "quirks": [
+        "Peel chickpeas for smoother texture.",
+        "Add an ice cube while blending for fluffiness."
+      ]
+    },
+    {
+      "title": "Shakshuka",
+      "timeMinutes": 25,
+      "costEstimate": 300,
+      "dietTags": ["vegetarian", "gluten-free"],
+      "skillLevel": 2,
+      "sidePairs": ["toasted bread"],
+      "flavor": { "heat": 2, "sweet": 2, "sour": 2, "umami": 3, "bitter": 0 },
+      "ingredients": [
+        { "name": "tomato", "groups": ["veg"], "qty": 3, "unit": "medium", "isKeystone": true },
+        { "name": "onion", "groups": ["aromatic"], "qty": 1, "unit": "small" },
+        { "name": "egg", "groups": ["protein"], "qty": 3, "unit": "pieces" },
+        { "name": "cumin", "groups": ["spice"], "qty": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Saute onion with spices.",
+        "Add tomatoes; simmer until thick.",
+        "Crack eggs on top; cover until set."
+      ],
+      "quirks": [
+        "Finish with parsley and feta.",
+        "Smoked paprika adds depth."
+      ]
+    }
+  ]
+}

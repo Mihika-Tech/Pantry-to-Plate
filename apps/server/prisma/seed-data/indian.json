@@ -1,0 +1,67 @@
+{
+  "cuisine": "Indian",
+  "dna": {
+    "aromatics": ["onion", "ginger", "garlic"],
+    "baseSpices": ["cumin", "coriander", "turmeric", "garam masala"],
+    "staples": ["rice", "atta", "ghee", "mustard oil"],
+    "techniques": ["tempering", "slow-simmer", "pressure-cook"],
+    "subsGraphJson": {
+      "yogurt": { "coconut_milk_plus_lemon": 0.6 },
+      "ghee": { "butter": 0.8 },
+      "paneer": { "tofu": 0.7 }
+    }
+  },
+  "recipes": [
+    {
+      "title": "Chana Masala",
+      "timeMinutes": 35,
+      "costEstimate": 250,
+      "dietTags": ["vegetarian", "vegan"],
+      "skillLevel": 2,
+      "sidePairs": ["jeera rice", "naan"],
+      "flavor": { "heat": 2, "sweet": 1, "sour": 2, "umami": 2, "bitter": 1 },
+      "ingredients": [
+        { "name": "chickpeas", "groups": ["protein"], "qty": 400, "unit": "g", "isKeystone": true },
+        { "name": "onion", "groups": ["aromatic"], "qty": 1, "unit": "large" },
+        { "name": "tomato", "groups": ["veg"], "qty": 2, "unit": "medium" },
+        { "name": "cumin", "groups": ["spice"], "qty": 1, "unit": "tsp" },
+        { "name": "garam masala", "groups": ["spice"], "qty": 1, "unit": "tsp" }
+      ],
+      "steps": [
+        "Saute onion until golden.",
+        "Add garlic, ginger, and spices.",
+        "Add tomatoes, cook till jammy.",
+        "Add chickpeas and simmer 10 min."
+      ],
+      "quirks": [
+        "Add amchur or lemon for tanginess.",
+        "Toast cumin seeds dry before grinding."
+      ]
+    },
+    {
+      "title": "Paneer Butter Masala",
+      "timeMinutes": 40,
+      "costEstimate": 400,
+      "dietTags": ["vegetarian"],
+      "skillLevel": 2,
+      "sidePairs": ["naan", "jeera rice"],
+      "flavor": { "heat": 1, "sweet": 3, "sour": 1, "umami": 3, "bitter": 0 },
+      "ingredients": [
+        { "name": "paneer", "groups": ["protein"], "qty": 200, "unit": "g", "isKeystone": true },
+        { "name": "tomato", "groups": ["veg"], "qty": 2, "unit": "medium" },
+        { "name": "butter", "groups": ["fat"], "qty": 2, "unit": "tbsp" },
+        { "name": "cream", "groups": ["dairy"], "qty": 3, "unit": "tbsp" },
+        { "name": "onion", "groups": ["aromatic"], "qty": 1, "unit": "large" }
+      ],
+      "steps": [
+        "Saute onions and tomatoes.",
+        "Blend into smooth gravy.",
+        "Add butter, cream, and paneer cubes; simmer 10 min."
+      ],
+      "quirks": [
+        "Use kasuri methi for authentic aroma.",
+        "A touch of honey balances acidity."
+      ]
+    }
+  ]
+}
