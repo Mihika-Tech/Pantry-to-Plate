@@ -157,3 +157,19 @@ section {
 .fit {
     color: var(--muted);
 }
+
+.input { width: 100%; padding: 0.6rem 0.8rem; border-radius: 10px; border:1px solid #1d1e25; background:#12131a; color: var(--fg); }
+.checklist .listbox { margin-top: 0.6rem; border:1px solid #1d1e25; border-radius:12px; background:#12131a; max-height: 360px; overflow:auto; }
+.checkrow { display:flex; gap:0.6rem; align-items:center; padding:0.6rem 0.8rem; border-bottom:1px solid #1d1e25; }
+.checkrow:last-child { border-bottom: 0; }
+.muted { color: var(--muted); }
+.small { font-size: 0.85rem; }
+.pills { display:flex; gap:0.5rem; flex-wrap: wrap; }
+.pill { border:1px solid #1d1e25; background:#12131a; color:var(--fg); padding:0.35rem 0.7rem; border-radius:999px; }
+.pill.on { background: var(--accent); color:#0a0a0b; }
+.slider { margin: 0.8rem 0 1rem; }
+.slider-head { display:flex; justify-content:space-between; margin-bottom:0.3rem; }
+.card.active { outline: 2px solid var(--accent); }
+.btn.disabled { opacity: 0.5; pointer-events: none; }
+.error { color: var(--down); }
+.flavors { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.25rem 1rem; }
